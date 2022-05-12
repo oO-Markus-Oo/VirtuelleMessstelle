@@ -62,11 +62,11 @@ class VirtuelleMessstelle extends IPSModule
             $this->UnregisterReference($referenceID);
         }
         if (IPS_VariableExists($primaryPointID)) {
-            //$this->RegisterReference($primaryPointID);
+            $this->RegisterReference($primaryPointID);
         }
         foreach ($secondaryPoints as $line) {
             if (IPS_VariableExists($line['VariableID'])) {
-                //$this->RegisterReference($line['VariableID']);
+                $this->RegisterReference($line['VariableID']);
             }
         }
 
