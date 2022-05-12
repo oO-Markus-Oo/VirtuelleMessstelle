@@ -62,11 +62,11 @@ class VirtuelleMessstelle extends IPSModule
             $this->UnregisterReference($referenceID);
         }
         if (IPS_VariableExists($primaryPointID)) {
-            $this->RegisterReference($primaryPointID);
+            //$this->RegisterReference($primaryPointID);
         }
         foreach ($secondaryPoints as $line) {
             if (IPS_VariableExists($line['VariableID'])) {
-                $this->RegisterReference($line['VariableID']);
+                //$this->RegisterReference($line['VariableID']);
             }
         }
 
@@ -77,7 +77,7 @@ class VirtuelleMessstelle extends IPSModule
         }
 
         //Register message for primary point
-        $this->RegisterMessage($primaryPointID, VM_UPDATE);
+        //$this->RegisterMessage($primaryPointID, VM_UPDATE);
     }
 
     public function MessageSink($TimeStamp, $SenderID, $Message, $Data)
